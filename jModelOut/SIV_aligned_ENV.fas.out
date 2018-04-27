@@ -1,0 +1,283 @@
+-------------------------- jModeltest 2.1.10 v20160303 --------------------------
+(c) 2011-onwards D. Darriba, G.L. Taboada, R. Doallo and D. Posada,
+(1) Department of Biochemistry, Genetics and Immunology
+    University of Vigo, 36310 Vigo, Spain.
+(2) Department of Electronics and Systems
+    University of A Coruna, 15071 A Coruna, Spain.
+e-mail: ddarriba@udc.es, dposada@uvigo.es
+--------------------------------------------------------------------------------
+ 
+Tue Apr 24 20:08:51 EDT 2018
+Linux 3.10.0-327.3.1.el7.x86_64, arch: amd64, bits: 64, numcores: 28
+ 
+--------------------------------------------------------------------------------
+Citation: Darriba D, Taboada GL, Doallo R and Posada D. 2012.
+          "jModelTest 2: more models, new heuristics and parallel computing".
+          Nature Methods 9(8), 772.
+--------------------------------------------------------------------------------
+ 
+jModelTest 2.1.10 v20160303
+Copyright (C) 2011 D. Darriba, G.L. Taboada, R. Doallo and D. Posada
+This program comes with ABSOLUTELY NO WARRANTY
+This is free software, and you are welcome to redistribute it under certain
+conditions
+ 
+Notice: This program may contain errors. Please inspect results carefully.
+ 
+ 
+Arguments = -d fasfiles/SIV_aligned_ENV.fas -t BIONJ -o fasfiles/SIV_aligned_ENV.fas.out -AICc -BIC -DT -s 3 -hLRT
+
+Reading data file "SIV_aligned_ENV.fas"... OK.
+  number of sequences: 38
+  number of sites: 2640
+ 
+ 
+---------------------------------------------------------------
+*                                                             *
+*        COMPUTATION OF LIKELIHOOD SCORES WITH PHYML          *
+*                                                             *
+---------------------------------------------------------------
+ 
+::Settings::
+ 
+ Phyml version = 20130103
+ Phyml binary = PhyML_3.0_linux64
+ Phyml path = /gpfs/home/cltucker/jModelTest/jmodeltest-2.1.10/exe/phyml/
+ Candidate models = 3
+   number of substitution schemes = 3
+   including only models with equal base frequencies
+   including only models without a proportion of invariable sites
+   including only models without rate variation among sites
+ Optimized free parameters (K) = substitution parameters + 73 branch lengths 
+ Base tree for likelihood calculations = BIONJ tree
+ 
+ 
+ 
+::Progress::
+ 
+Model 		 Exec. Time 	 Total Time 	 -lnL
+-------------------------------------------------------------------------
+JC		00h:00:03:06	00h:00:03:06	   49125.5266	 (1/3)
+K80		00h:00:04:07	00h:00:04:07	   48369.8418	 (2/3)
+SYM		00h:00:06:00	00h:00:06:00	   48033.6022	 (3/3)
+ 
+   Model = JC
+   partition = 000000
+   -lnL = 49125.5266
+   K = 73 
+ 
+   Model = K80
+   partition = 010010
+   -lnL = 48369.8418
+   K = 74
+   kappa = 2.3186 (ti/tv = 1.1593) 
+ 
+   Model = SYM
+   partition = 012345
+   -lnL = 48033.6021
+   K = 78
+   R(a) [AC] =  3.2885
+   R(b) [AG] =  5.1707
+   R(c) [AT] =  2.7242
+   R(d) [CG] =  1.3706
+   R(e) [CT] =  5.2001
+   R(f) [GT] =  1.0000 
+ 
+  Best-fit models should be reoptimized for comparison with unconstrained likelihood
+ 
+Computation of likelihood scores completed. It took 00h:00:06:00.
+ 
+
+
+
+---------------------------------------------------------------
+*                                                             *
+*        CORRECTED AKAIKE INFORMATION CRITERION (AICc)        *
+*                                                             *
+---------------------------------------------------------------
+ 
+ Sample size: 2640.0
+ 
+ Model selected: 
+   Model = SYM
+   partition = 012345
+   -lnL = 48033.6021
+   K = 78
+   R(a) [AC] =  3.2885
+   R(b) [AG] =  5.1707
+   R(c) [AT] =  2.7242
+   R(d) [CG] =  1.3706
+   R(e) [CT] =  5.2001
+   R(f) [GT] =  1.0000 
+ 
+Tree for the best AICc model = ((((((((((((((X52154:0.13757801,AY169968:0.13410476):0.06899178,(FR686511:0.02628239,FR686510:0.02086079):0.15449727):0.02993257,GQ217539:0.24301109):0.03760335,((((EF535993:0.10623414,AF115393:0.09507090):0.03342684,AJ271369:0.11072390):0.06831813,AF103818:0.16753478):0.03615855,(JN835460:0.00000003,DQ373065:0.00000001):0.16303405):0.06711035):0.02047147,((JN835462:0.00000001,DQ373066:0.00000001):0.20961228,AF382828:0.22412291):0.05241268):0.02414374,((JX178450:0.15627249,DQ373064:0.16722364):0.04950486,((JN835461:0.00000001,EF535994:0.00000001):0.16218617,DQ373063:0.18757490):0.03365555):0.09950340):0.05688822,((KP004990:0.15054138,KP004989:0.16660557):0.07529361,((((FJ424866:0.00000001,(FJ424865:0.00044520,FJ424864:0.00088915):0.00000007):0.03947141,FJ424863:0.03191727):0.02524015,FJ424871:0.05376502):0.14363505,KP004991:0.20290328):0.04076320):0.12909994):0.12625562,U42720:0.26742099):0.07189136,JQ866001:0.23132410):0.06112084,(JN091690:0.14676462,JQ768416:0.16417848):0.04519216):0.05855704,JN091691:0.09448537):0.02546941,(EF394356:0.00091696,AF447763:0.00041267):0.11278341):0.04053684,(EF394357:0.00000001,DQ374657:0.00044671):0.06085775):0.07988841,EF394358:0.00105591,DQ374658:0.00384791);
+ 
+ 
+* AICc MODEL SELECTION : Selection uncertainty
+ 
+Model             -lnL    K     AICc       delta       weight   cumWeight
+------------------------------------------------------------------------- 
+SYM         48033.60215   78  96228.016483   0.000000    1.000000   1.000000 
+K80         48369.84178   74  96892.011045  663.994563   6.54e-145   1.000000 
+JC          49125.52657   73  98401.263584  2173.247102   0.00e+000   1.000000
+-------------------------------------------------------------------------
+-lnL:	negative log likelihod
+ K:	number of estimated parameters
+ AICc:	Corrected Akaike Information Criterion
+ delta:	AICc difference
+ weight:	AICc weight
+ cumWeight:	cumulative AICc weight
+ 
+ 
+* AICc MODEL SELECTION : Confidence interval
+ 
+There are 3 models in the 100% confidence interval: [ SYM K80 JC ] 
+ 
+ 
+* AICc MODEL SELECTION : Best Model's command line
+ 
+phyml  -i /tmp/jmodeltest788499428904034736.phy -d nt -n 1 -b 0 --run_id SYM -m 012345 -f 0.25,0.25,0.25,0.25 -c 1 --no_memory_check -o lr
+
+
+
+---------------------------------------------------------------
+*                                                             *
+*             BAYESIAN INFORMATION CRITERION (BIC)            *
+*                                                             *
+---------------------------------------------------------------
+ 
+ Sample size: 2640.0
+ 
+ Model selected: 
+   Model = SYM
+   partition = 012345
+   -lnL = 48033.6021
+   K = 78
+   R(a) [AC] =  3.2885
+   R(b) [AG] =  5.1707
+   R(c) [AT] =  2.7242
+   R(d) [CG] =  1.3706
+   R(e) [CT] =  5.2001
+   R(f) [GT] =  1.0000 
+ 
+Tree for the best BIC model = ((((((((((((((X52154:0.13757801,AY169968:0.13410476):0.06899178,(FR686511:0.02628239,FR686510:0.02086079):0.15449727):0.02993257,GQ217539:0.24301109):0.03760335,((((EF535993:0.10623414,AF115393:0.09507090):0.03342684,AJ271369:0.11072390):0.06831813,AF103818:0.16753478):0.03615855,(JN835460:0.00000003,DQ373065:0.00000001):0.16303405):0.06711035):0.02047147,((JN835462:0.00000001,DQ373066:0.00000001):0.20961228,AF382828:0.22412291):0.05241268):0.02414374,((JX178450:0.15627249,DQ373064:0.16722364):0.04950486,((JN835461:0.00000001,EF535994:0.00000001):0.16218617,DQ373063:0.18757490):0.03365555):0.09950340):0.05688822,((KP004990:0.15054138,KP004989:0.16660557):0.07529361,((((FJ424866:0.00000001,(FJ424865:0.00044520,FJ424864:0.00088915):0.00000007):0.03947141,FJ424863:0.03191727):0.02524015,FJ424871:0.05376502):0.14363505,KP004991:0.20290328):0.04076320):0.12909994):0.12625562,U42720:0.26742099):0.07189136,JQ866001:0.23132410):0.06112084,(JN091690:0.14676462,JQ768416:0.16417848):0.04519216):0.05855704,JN091691:0.09448537):0.02546941,(EF394356:0.00091696,AF447763:0.00041267):0.11278341):0.04053684,(EF394357:0.00000001,DQ374657:0.00044671):0.06085775):0.07988841,EF394358:0.00105591,DQ374658:0.00384791);
+ 
+ 
+* BIC MODEL SELECTION : Selection uncertainty
+ 
+Model             -lnL    K      BIC       delta       weight   cumWeight
+------------------------------------------------------------------------- 
+SYM         48033.60215   78  96681.729967   0.000000    1.000000   1.000000 
+K80         48369.84178   74  97322.695091  640.965123   6.55e-140   1.000000 
+JC          49125.52657   73  98826.186136  2144.456169   0.00e+000   1.000000
+-------------------------------------------------------------------------
+-lnL:	negative log likelihod
+K:	number of estimated parameters
+BIC:	Bayesian Information Criterion
+delta:	BIC difference
+weight:	BIC weight
+cumWeight:	cumulative BIC weight
+ 
+ 
+* BIC MODEL SELECTION : Confidence interval
+ 
+There are 3 models in the 100% confidence interval: [ SYM K80 JC ] 
+ 
+ 
+* BIC MODEL SELECTION : Best Model's command line
+ 
+phyml  -i /tmp/jmodeltest788499428904034736.phy -d nt -n 1 -b 0 --run_id SYM -m 012345 -f 0.25,0.25,0.25,0.25 -c 1 --no_memory_check -o lr
+
+
+
+---------------------------------------------------------------
+*                                                             *
+*      DECISION THEORY PERFORMANCE-BASED SELECTION (DT)       *
+*                                                             *
+---------------------------------------------------------------
+ 
+ Sample size: 2640.0
+ 
+ Model selected: 
+   Model = SYM
+   partition = 012345
+   -lnL = 48033.6021
+   K = 78
+   R(a) [AC] =  3.2885
+   R(b) [AG] =  5.1707
+   R(c) [AT] =  2.7242
+   R(d) [CG] =  1.3706
+   R(e) [CT] =  5.2001
+   R(f) [GT] =  1.0000 
+ 
+Tree for the best DT model = ((((((((((((((X52154:0.13757801,AY169968:0.13410476):0.06899178,(FR686511:0.02628239,FR686510:0.02086079):0.15449727):0.02993257,GQ217539:0.24301109):0.03760335,((((EF535993:0.10623414,AF115393:0.09507090):0.03342684,AJ271369:0.11072390):0.06831813,AF103818:0.16753478):0.03615855,(JN835460:0.00000003,DQ373065:0.00000001):0.16303405):0.06711035):0.02047147,((JN835462:0.00000001,DQ373066:0.00000001):0.20961228,AF382828:0.22412291):0.05241268):0.02414374,((JX178450:0.15627249,DQ373064:0.16722364):0.04950486,((JN835461:0.00000001,EF535994:0.00000001):0.16218617,DQ373063:0.18757490):0.03365555):0.09950340):0.05688822,((KP004990:0.15054138,KP004989:0.16660557):0.07529361,((((FJ424866:0.00000001,(FJ424865:0.00044520,FJ424864:0.00088915):0.00000007):0.03947141,FJ424863:0.03191727):0.02524015,FJ424871:0.05376502):0.14363505,KP004991:0.20290328):0.04076320):0.12909994):0.12625562,U42720:0.26742099):0.07189136,JQ866001:0.23132410):0.06112084,(JN091690:0.14676462,JQ768416:0.16417848):0.04519216):0.05855704,JN091691:0.09448537):0.02546941,(EF394356:0.00091696,AF447763:0.00041267):0.11278341):0.04053684,(EF394357:0.00000001,DQ374657:0.00044671):0.06085775):0.07988841,EF394358:0.00105591,DQ374658:0.00384791);
+ 
+ 
+* DT MODEL SELECTION : Selection uncertainty
+ 
+Model             -lnL    K       DT       delta       weight   cumWeight
+------------------------------------------------------------------------- 
+SYM         48033.60215   78    0.000000   0.000000    1.000000   1.000000 
+JC          49125.52657   73    0.017994   0.017994   1.01e-139   1.000000 
+K80         48369.84178   74    0.027748   0.027748   6.55e-140   1.000000
+-------------------------------------------------------------------------
+-lnL:t	negative log likelihod
+K:	number of estimated parameters
+DT:	decision theory performance-based score
+delta:	DT difference
+weight:	DT weight* (calculated using 1/DT)
+cumWeight:	cumulative DT weight
+ 
+ 
+* DT MODEL SELECTION : Confidence interval
+ 
+There are 3 models in the 100% confidence interval: [ SYM JC K80 ] 
+ 
+ 
+* DT MODEL SELECTION : Best Model's command line
+ 
+phyml  -i /tmp/jmodeltest788499428904034736.phy -d nt -n 1 -b 0 --run_id SYM -m 012345 -f 0.25,0.25,0.25,0.25 -c 1 --no_memory_check -o lr
+
+
+
+---------------------------------------------------------------
+*                                                             *
+*          HIERARCHICAL LIKELIHOO RATIO TESTS (hLRT)          *
+*                                                             *
+---------------------------------------------------------------
+
+hLRT is only available when likelihoods are calculated on the same tree (i.e., models are nested)
+Execute jModelTest using a fixed BIONJ-JC tree or a user-defined topology
+ 
+ 
+ 
+---------------------------------------------------------------
+*                                                             *
+*                    SELECTION SUMMARY                        *
+*                                                             *
+---------------------------------------------------------------
+
+::Optimized Topologies Summary::
+
+There are 1 different topologies.
+
+Topology Id: 1
+	Rank	Weight		 RF	AvgEucl		VarEucl
+BIC	  1	100.00%		  0	1.52e-02	1.32e-04
+AICc	  1	100.00%		  0	1.52e-02	1.32e-04
+DT	  1	100.00%		  0	1.52e-02	1.32e-04
+Models supporting:   3
+                     JC K80 SYM 
+
+ 
+ 
+ 
+::Best Models::
+ 
+	Model 		f(a) 	f(c) 	f(g) 	f(t) 	kappa 	titv 	Ra	Rb	Rc	Rd	Re	Rf	pInv 	gamma
+----------------------------------------------------------------------------------------------------------------------------------------
+BIC 	SYM		0.25	0.25	0.25	0.25	0.00	0.00	  3.289   5.171   2.724   1.371   5.200   1.000 N/A	N/A
+AICc 	SYM		0.25	0.25	0.25	0.25	0.00	0.00	  3.289   5.171   2.724   1.371   5.200   1.000 N/A	N/A
+DT 	SYM		0.25	0.25	0.25	0.25	0.00	0.00	  3.289   5.171   2.724   1.371   5.200   1.000 N/A	N/A
+ 
+Program is done.
