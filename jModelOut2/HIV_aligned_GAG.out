@@ -1,0 +1,59 @@
+-------------------------- jModeltest 2.1.10 v20160303 --------------------------
+(c) 2011-onwards D. Darriba, G.L. Taboada, R. Doallo and D. Posada,
+(1) Department of Biochemistry, Genetics and Immunology
+    University of Vigo, 36310 Vigo, Spain.
+(2) Department of Electronics and Systems
+    University of A Coruna, 15071 A Coruna, Spain.
+e-mail: ddarriba@udc.es, dposada@uvigo.es
+--------------------------------------------------------------------------------
+ 
+Tue May 01 17:28:03 EDT 2018
+Linux 3.10.0-327.3.1.el7.x86_64, arch: amd64, bits: 64, numcores: 40
+ 
+--------------------------------------------------------------------------------
+Citation: Darriba D, Taboada GL, Doallo R and Posada D. 2012.
+          "jModelTest 2: more models, new heuristics and parallel computing".
+          Nature Methods 9(8), 772.
+--------------------------------------------------------------------------------
+ 
+jModelTest 2.1.10 v20160303
+Copyright (C) 2011 D. Darriba, G.L. Taboada, R. Doallo and D. Posada
+This program comes with ABSOLUTELY NO WARRANTY
+This is free software, and you are welcome to redistribute it under certain
+conditions
+ 
+Notice: This program may contain errors. Please inspect results carefully.
+ 
+ 
+Arguments = -d /gpfs/scratch/cltucker/GAG_VPU_fasfiles/HIV_aligned_GAG.fas -t BIONJ -o HIV_aligned_GAG.out -AICc -BIC -DT -s 3 -hLRT
+
+Reading data file "HIV_aligned_GAG.fas"... OK.
+  number of sequences: 151
+  number of sites: 1500
+ 
+ 
+---------------------------------------------------------------
+*                                                             *
+*        COMPUTATION OF LIKELIHOOD SCORES WITH PHYML          *
+*                                                             *
+---------------------------------------------------------------
+ 
+::Settings::
+ 
+ Phyml version = 20130103
+ Phyml binary = PhyML_3.0_linux64
+ Phyml path = /gpfs/home/cltucker/jModelTest/jmodeltest-2.1.10/exe/phyml/
+ Candidate models = 3
+   number of substitution schemes = 3
+   including only models with equal base frequencies
+   including only models without a proportion of invariable sites
+   including only models without rate variation among sites
+ Optimized free parameters (K) = substitution parameters + 299 branch lengths 
+ Base tree for likelihood calculations = BIONJ tree
+ 
+ 
+ 
+::Progress::
+ 
+Model 		 Exec. Time 	 Total Time 	 -lnL
+-------------------------------------------------------------------------
